@@ -58,22 +58,11 @@ h1 { font-family: var(--condensed); font-size: clamp(58px, 5.7vw, 82px); line-he
 .button-primary:hover { background: #124475; text-decoration: none; }
 .text-link { display: inline-flex; align-items: center; gap: 12px; color: var(--navy); font-family: var(--condensed); font-weight: 500; font-size: 15px; text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: 2px; }
 .text-link:hover { border-color: var(--navy); }
-.affiliation { margin-top: 35px; padding-left: 15px; border-left: 2px solid var(--gold); color: var(--navy); font-size: 13px; line-height: 1.6; }
-.affiliation span { color: var(--muted); }
-.affiliation p + p { margin-top: 14px; }
-.language-figure { padding: 25px 28px 28px; border: 1px solid var(--line); background: white; }
-.figure-top { display: flex; justify-content: space-between; gap: 15px; color: var(--muted); font-family: var(--condensed); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; }
-.color-study { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 26px; padding-bottom: 23px; }
-.color-field { position: relative; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 9px; min-height: 235px; border-radius: 120px 120px 4px 4px; }
-.field-dark { background: var(--navy); color: white; }
-.field-light { background: var(--blue); color: var(--navy); transform: translateY(23px); }
-.color-field > [lang] { font-size: clamp(29px, 3vw, 41px); font-family: var(--serif); letter-spacing: -.065em; line-height: 1.2; }
-.color-meaning { padding: 1px 8px; background: var(--white); color: var(--navy); font-family: var(--condensed); font-size: 14px; letter-spacing: .045em; }
-.color-divider { position: absolute; left: 50%; top: 47%; z-index: 1; width: 32px; height: 32px; border-radius: 50%; background: var(--gold); color: var(--navy); font-family: var(--serif); font-size: 20px; text-align: center; line-height: 32px; transform: translateX(-50%); }
-figcaption { margin-top: 25px; padding-top: 23px; border-top: 1px solid var(--line); }
-.figure-label { display: block; font-family: var(--condensed); color: var(--muted); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; }
-figcaption strong { display: block; margin-top: 9px; color: var(--navy); font-family: var(--serif); font-size: 23px; font-weight: 400; line-height: 1.4; letter-spacing: -.035em; }
-figcaption > span:last-child { display: block; margin-top: 12px; color: var(--muted); font-size: 12px; line-height: 1.8; }
+.profile-figure { padding: 25px 28px 28px; border: 1px solid var(--line); background: white; }
+.profile-photo { display: block; width: 100%; height: auto; }
+.profile-figure figcaption { margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--line); }
+.profile-figure figcaption strong { display: block; color: var(--navy); font-family: var(--serif); font-size: 23px; font-weight: 400; line-height: 1.4; }
+.profile-figure figcaption span { display: block; margin-top: 8px; color: var(--muted); font-size: 12px; line-height: 1.8; }
 .topic-band { border-block: 1px solid var(--line); }
 .topic-band .container { display: flex; align-items: center; justify-content: space-between; gap: 22px; padding-block: 21px; color: var(--navy); font-family: var(--condensed); font-size: 14px; }
 .topic-band [aria-hidden] { color: var(--gold); font-size: 12px; }
@@ -138,6 +127,13 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
 .talk-list h4 { font-size: 16px; line-height: 1.55; font-weight: 500; }
 .talk-list p { color: var(--muted); margin-top: 8px; font-size: 12px; }
 .talk-list details { margin-top: 7px; }
+.talk-list .text-link { margin-top: 10px; font-size: 12px; }
+.organization-section { background: var(--pale-blue); border-top: 1px solid var(--line); }
+.organization-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.organization-card { display: flex; flex-direction: column; align-items: flex-start; padding: 28px; background: white; border-top: 2px solid var(--gold); }
+.organization-card h3 { margin-top: 17px; font-family: var(--condensed); font-size: 25px; line-height: 1.35; }
+.organization-card p { margin-top: 15px; margin-bottom: 24px; color: var(--muted); font-size: 14px; line-height: 1.8; }
+.organization-card .text-link { margin-top: auto; font-size: 14px; }
 .career-section { background: white; border-top: 1px solid var(--line); }
 .career-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
 .timeline { list-style: none; padding: 0; }
@@ -155,7 +151,7 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
 .international p:not(.small-label) { margin-top: 12px; color: var(--muted); font-size: 14px; }
 .international strong { color: var(--ink); font-weight: 500; }
 .contact-section { padding-block: 75px 80px; background: var(--navy); color: white; }
-.contact-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 100px; align-items: end; }
+.contact-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 100px; align-items: start; }
 .contact-section .eyebrow { color: white; }
 .contact-section h2 { color: white; font-size: 47px; }
 .contact-section h2 em { color: #c8d8ef; }
@@ -165,6 +161,9 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
 .contact-details { padding-bottom: 3px; }
 .contact-details > .small-label { color: #e1e7ef; }
 .contact-details > p + p { margin-top: 13px; font-size: 14px; line-height: 1.9; }
+.contact-location { margin-top: 22px; }
+.contact-location h3 { color: white; font-family: var(--condensed); font-size: 17px; line-height: 1.5; }
+.contact-location p, .contact-location address { margin-top: 8px; color: #e1e7ef; font-size: 14px; font-style: normal; line-height: 1.9; }
 .profile-links { margin-top: 24px; }
 .profile-links a { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 20px; padding-block: 13px; border-top: 1px solid #325577; font-family: var(--condensed); font-size: 13px; text-decoration: none; }
 .profile-links a span:last-child { color: #e1e7ef; }
@@ -182,12 +181,11 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
   nav a { font-size: 14px; }
   .research-grid, .career-grid, .teaching-grid { gap: 45px; }
   .contact-grid { gap: 60px; }
-  .language-figure { padding: 22px; }
-  .color-field { min-height: 220px; }
-  .color-field > [lang] { font-size: 31px; }
+  .profile-figure { padding: 22px; }
   .topic-band .container { gap: 15px; font-size: 12px; }
 }
 @media (max-width: 860px) {
+  .organization-grid { grid-template-columns: 1fr; gap: 20px; }
   html { scroll-padding-top: 95px; }
   .header-inner { flex-wrap: wrap; min-height: 78px; gap: 0; }
   .wordmark { padding-block: 14px; }
@@ -204,15 +202,8 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
   .hero-title { font-size: 27px; }
   .hero-intro { font-size: 15px; }
   .hero-actions { gap: 17px; }
-  .affiliation { font-size: 12px; }
-  .language-figure { padding: 18px; }
-  .figure-top { font-size: 9px; gap: 8px; }
-  .color-study { gap: 9px; }
-  .color-field { min-height: 190px; }
-  .color-field > [lang] { font-size: 26px; }
-  .color-meaning { font-size: 11px; }
-  figcaption strong { font-size: 20px; }
-  .figure-label { font-size: 10px; }
+  .profile-figure { padding: 18px; }
+  .profile-figure figcaption strong { font-size: 20px; }
   .section { padding-block: 75px; }
   .research-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
   .research-topic { gap: 12px; }
@@ -242,15 +233,9 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
   .hero-actions { gap: 23px; margin-top: 26px; }
   .hero-actions .text-link { font-size: 14px; }
   .button { gap: 23px; padding: 11px 16px; font-size: 15px; }
-  .affiliation { margin-top: 27px; }
-  .language-figure { max-width: 410px; width: 100%; justify-self: center; padding: 23px; }
-  .figure-top { font-size: 10px; }
-  .color-study { gap: 12px; margin-top: 20px; }
-  .color-field { min-height: 198px; }
-  .color-field > [lang] { font-size: clamp(29px, 8vw, 38px); }
-  .color-meaning { font-size: 13px; }
-  figcaption strong { font-size: 24px; }
-  figcaption > span:last-child { font-size: 13px; }
+  .profile-figure { max-width: 410px; width: 100%; justify-self: center; padding: 23px; }
+  .profile-figure figcaption strong { font-size: 24px; }
+  .profile-figure figcaption span { font-size: 13px; }
   .topic-band .container { column-gap: 16px; font-size: 12px; }
   h2 { font-size: clamp(27px, 7.1vw, 35px); }
   .section-heading { margin-bottom: 32px; }
@@ -305,7 +290,7 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
   .container { width: 100%; }
   .site-header { position: static; }
   .header-inner { min-height: 65px; }
-  nav, .menu-toggle, .hero-actions, .topic-band, .language-figure, .skip-link, .site-footer a, .dissertation-mark { display: none !important; }
+  nav, .menu-toggle, .hero-actions, .topic-band, .profile-figure, .skip-link, .site-footer a, .dissertation-mark { display: none !important; }
   .hero { display: block; padding-block: 25px; }
   .hero h1 { font-size: 38pt; }
   .hero-title { font-size: 19pt; }
@@ -314,14 +299,17 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
   h2 { font-size: 22pt; }
   .section-heading { margin-bottom: 20px; }
   .research-grid, .career-grid, .teaching-grid, .contact-grid { gap: 25px; }
-  .dissertation, .teaching-card { background: white; color: #000; border: 1px solid #999; }
+  .dissertation, .teaching-card, .organization-card { background: white; color: #000; border: 1px solid #999; }
+  .organization-section { background: white; }
+  .organization-grid { grid-template-columns: 1fr; }
   .dissertation h3, .dissertation .eyebrow, .dissertation-subtitle, .dissertation > p:not([class]), .dissertation dt, .dissertation dd { color: #000; }
   .dissertation { break-inside: avoid; }
   .publication { gap: 20px; padding-block: 15px; }
-  .publication, .timeline li, .talk-list > li, .teaching-card { break-inside: avoid; }
+  .publication, .timeline li, .talk-list > li, .teaching-card, .organization-card { break-inside: avoid; }
   details { display: none; }
   .contact-section { background: white; color: #000; border-top: 1px solid #999; padding-block: 25px; }
   .contact-section h2, .contact-section h2 em, .contact-section h2 + p, .contact-section .eyebrow, .contact-details > .small-label, .profile-links a span:last-child { color: #000; }
+  .contact-location h3, .contact-location p, .contact-location address { color: #000; }
   .contact-section h2 { font-size: 25pt; }
   .contact-email { font-size: 17pt; }
 }
