@@ -161,12 +161,12 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
 .timeline p { margin-top: 8px; color: var(--muted); font-size: 13px; }
 .timeline .text-link { margin-top: 10px; font-size: 13px; }
 .career-links { display: flex; flex-wrap: wrap; column-gap: 20px; }
-.international { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--line); }
-.abroad-stays { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--line); }
+.international-experience-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px; align-items: start; margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--line); }
+.international, .abroad-stays { min-width: 0; }
 .international h3 { margin-top: 12px; font-family: var(--serif); font-size: 27px; letter-spacing: -.03em; }
 .international-intro { max-width: 900px; margin-top: 16px; color: var(--muted); font-size: 15px; line-height: 1.8; }
-.international-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 20px; padding: 0; list-style: none; }
-.international-list li { display: grid; grid-template-columns: 50px minmax(0, 1fr); gap: 20px; padding: 24px; background: var(--paper); border-left: 2px solid var(--gold); }
+.international-list { display: grid; grid-template-columns: 1fr; gap: 14px; margin-top: 20px; padding: 0; list-style: none; }
+.international-list li { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 14px; padding: 18px; background: var(--paper); border-left: 2px solid var(--gold); }
 .international-list time { padding-top: 2px; color: var(--muted); font-family: var(--condensed); font-size: 14px; }
 .international-list h4 { font-family: var(--condensed); font-size: 20px; line-height: 1.4; }
 .international-list p { margin-top: 8px; color: var(--muted); font-size: 14px; }
@@ -205,7 +205,7 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
   .publications-conferences-grid { gap: 32px; }
   nav { gap: 16px; }
   nav a { font-size: 14px; }
-  .research-grid, .career-grid { gap: 32px; }
+  .research-grid, .career-grid, .international-experience-grid { gap: 32px; }
   .contact-grid { gap: 40px; }
   .topic-band .container { gap: 15px; font-size: 12px; }
   .topic-keyword { gap: 15px; }
@@ -213,6 +213,7 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
 @media (max-width: 860px) {
   .organization-grid { grid-template-columns: 1fr; gap: 16px; }
   .publications-conferences-grid { grid-template-columns: 1fr; gap: 24px; align-items: start; }
+  .international-experience-grid { grid-template-columns: 1fr; gap: 24px; }
   html { scroll-padding-top: 95px; }
   .header-inner { flex-wrap: wrap; min-height: 78px; gap: 0; }
   .wordmark { padding-block: 14px; }
@@ -281,7 +282,7 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
   .talk-list time { font-size: 11px; }
   .list-heading { font-size: 23px; }
   .timeline h4 { font-size: 17px; }
-  .international { margin-top: 24px; padding-top: 20px; }
+  .international-experience-grid { margin-top: 24px; }
   .international h3 { font-size: 22px; }
   .international-list { grid-template-columns: 1fr; gap: 14px; margin-top: 18px; }
   .international-list li { gap: 15px; padding: 21px; }
@@ -319,6 +320,7 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
   h2 { font-size: 22pt; }
   .section-heading { margin-bottom: 20px; }
   .publications-conferences-grid { grid-template-columns: 1fr; gap: 20px; }
+  .international-experience-grid { grid-template-columns: 1fr; gap: 20px; }
   .publication-column, .conference-contributions, .publication-list, .conference-contributions > .talk-list { display: block; }
   .research-grid, .career-grid, .teaching-grid, .contact-grid { gap: 25px; }
   .dissertation, .teaching-card, .organization-card { background: white; color: #000; border: 1px solid #999; }
