@@ -52,10 +52,6 @@ h1 { font-family: var(--condensed); font-size: clamp(58px, 5.7vw, 82px); line-he
 .name-dot { color: var(--gold); }
 .hero-title { margin-top: 23px; font-family: var(--serif); color: var(--navy); font-size: clamp(25px, 2.6vw, 35px); font-weight: 400; line-height: 1.4; letter-spacing: -.045em; }
 .hero-intro { max-width: 505px; margin-top: 25px; color: var(--muted); font-size: 17px; line-height: 1.8; }
-.hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; margin-top: 29px; }
-.button { display: inline-flex; align-items: center; justify-content: space-between; gap: 30px; padding: 12px 19px; text-decoration: none; font-family: var(--condensed); font-weight: 500; font-size: 16px; border: 1px solid var(--navy); transition: background 180ms, color 180ms; }
-.button-primary { background: var(--navy); color: white; }
-.button-primary:hover { background: #124475; text-decoration: none; }
 .text-link { display: inline-flex; align-items: center; gap: 12px; color: var(--navy); font-family: var(--condensed); font-weight: 500; font-size: 15px; text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: 2px; }
 .text-link:hover { border-color: var(--navy); }
 .profile-figure { padding: 25px 28px 28px; border: 1px solid var(--line); background: white; }
@@ -198,7 +194,6 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
   h1 { font-size: 58px; }
   .hero-title { font-size: 27px; }
   .hero-intro { font-size: 15px; }
-  .hero-actions { gap: 17px; }
   .profile-figure { padding: 18px; }
   .section { padding-block: 75px; }
   .research-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
@@ -226,9 +221,6 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
   .hero h1 { font-size: clamp(52px, 12vw, 70px); }
   .hero-title { margin-top: 18px; font-size: clamp(23px, 5.7vw, 30px); }
   .hero-intro { font-size: 16px; margin-top: 21px; }
-  .hero-actions { gap: 23px; margin-top: 26px; }
-  .hero-actions .text-link { font-size: 14px; }
-  .button { gap: 23px; padding: 11px 16px; font-size: 15px; }
   .profile-figure { max-width: 410px; width: 100%; justify-self: center; padding: 23px; }
   .topic-band .container { column-gap: 16px; font-size: 12px; }
   h2 { font-size: clamp(27px, 7.1vw, 35px); }
@@ -268,9 +260,6 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
 }
 @media (max-width: 360px) {
   .container { width: calc(100% - 32px); }
-  .hero-actions { gap: 16px; }
-  .hero-actions .text-link { font-size: 13px; }
-  .hero-actions .button { gap: 15px; padding-inline: 12px; font-size: 14px; }
   .wordmark { gap: 10px; font-size: 15px; }
   .contact-email { font-size: 20px; gap: 10px; }
 }
@@ -284,7 +273,7 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
   .container { width: 100%; }
   .site-header { position: static; }
   .header-inner { min-height: 65px; }
-  nav, .menu-toggle, .hero-actions, .topic-band, .profile-figure, .skip-link, .site-footer a, .dissertation-mark { display: none !important; }
+  nav, .menu-toggle, .topic-band, .profile-figure, .skip-link, .site-footer a, .dissertation-mark { display: none !important; }
   .hero { display: block; padding-block: 25px; }
   .hero h1 { font-size: 38pt; }
   .hero-title { font-size: 19pt; }
