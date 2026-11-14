@@ -1,0 +1,10 @@
+# Local source documents are not part of the public website.
+/lebenslauf_dissertation.pdf
+/publikationen_vortraege.pdf
+/tmp/
+/.tools/
+/output/
+/.preview/
+__pycache__/
+Thumbs.db
+.DS_Store
