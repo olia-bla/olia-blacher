@@ -60,6 +60,7 @@ h1 { font-family: var(--condensed); font-size: clamp(58px, 5.7vw, 82px); line-he
 .text-link:hover { border-color: var(--navy); }
 .affiliation { margin-top: 35px; padding-left: 15px; border-left: 2px solid var(--gold); color: var(--navy); font-size: 13px; line-height: 1.6; }
 .affiliation span { color: var(--muted); }
+.affiliation p + p { margin-top: 14px; }
 .language-figure { padding: 25px 28px 28px; border: 1px solid var(--line); background: white; }
 .figure-top { display: flex; justify-content: space-between; gap: 15px; color: var(--muted); font-family: var(--condensed); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; }
 .color-study { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 26px; padding-bottom: 23px; }
@@ -100,6 +101,7 @@ h2 em { color: var(--muted); }
 .publication-section { background: white; border-block: 1px solid var(--line); }
 .heading-with-link { display: flex; align-items: end; justify-content: space-between; gap: 30px; }
 .heading-with-link > .text-link { flex-shrink: 0; margin-bottom: 9px; }
+.publication-resources { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; flex-shrink: 0; margin-bottom: 9px; }
 .publication { display: grid; grid-template-columns: 115px 1fr; gap: 32px; padding-block: 30px; border-top: 1px solid var(--line); }
 .publication:last-child { padding-bottom: 0; }
 .publication-year { padding-top: 2px; color: var(--navy); font-family: var(--condensed); font-size: 29px; font-weight: 400; line-height: 1.2; }
@@ -121,6 +123,7 @@ summary:hover { text-decoration: underline; text-decoration-color: var(--gold); 
 details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wrap: anywhere; }
 .teaching-grid { display: grid; grid-template-columns: .82fr 1.18fr; gap: 80px; }
 .teaching-card { padding: 29px 30px 32px; background: var(--pale-blue); border-left: 2px solid var(--gold); }
+.teaching-card + .teaching-card { margin-top: 24px; }
 .small-label { font-family: var(--condensed); color: var(--muted); font-size: 12px; font-weight: 500; letter-spacing: .065em; text-transform: uppercase; }
 .teaching-card h3 { margin-top: 18px; font-family: var(--serif); font-size: 24px; line-height: 1.5; letter-spacing: -.03em; }
 .teaching-card p { margin-top: 18px; color: var(--muted); font-size: 14px; }
@@ -145,6 +148,7 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
 .timeline h4 { margin-top: 6px; font-size: 17px; line-height: 1.5; }
 .timeline p { margin-top: 8px; color: var(--muted); font-size: 13px; }
 .timeline .text-link { margin-top: 10px; font-size: 13px; }
+.career-links { display: flex; flex-wrap: wrap; column-gap: 20px; }
 .international { display: grid; grid-template-columns: 1fr 3fr; gap: 50px; margin-top: 48px; padding-top: 30px; border-top: 1px solid var(--line); }
 .international > .small-label { padding-top: 5px; }
 .international h3 { font-family: var(--serif); font-size: 23px; letter-spacing: -.03em; }
@@ -257,7 +261,7 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
   .dissertation { padding: 29px; }
   .dissertation h3 { font-size: 30px; }
   .heading-with-link { align-items: start; flex-direction: column; gap: 18px; }
-  .heading-with-link > .text-link { margin-bottom: 0; }
+  .heading-with-link > .text-link, .publication-resources { margin-bottom: 0; }
   .publication { grid-template-columns: 1fr; gap: 14px; padding-block: 25px; }
   .publication-year { display: flex; align-items: center; gap: 13px; font-size: 25px; }
   .publication-year span { margin-top: 0; }
