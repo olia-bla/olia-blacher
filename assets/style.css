@@ -51,6 +51,7 @@ nav .nav-contact { margin-left: 4px; }
 .eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; color: var(--navy); font-family: var(--condensed); font-size: 13px; font-weight: 600; letter-spacing: .095em; text-transform: uppercase; }
 .eyebrow::before { content: ""; display: block; width: 26px; height: 2px; background: var(--gold); flex-shrink: 0; }
 .hero .eyebrow { color: var(--muted); line-height: 1.6; }
+.hero .eyebrow::before { content: none; }
 h1 { font-family: var(--condensed); font-size: clamp(58px, 5.7vw, 82px); line-height: 1.05; letter-spacing: -.04em; }
 .hero h1 { color: var(--navy); font-size: clamp(64px, 6.2vw, 88px); }
 .name-dot { color: var(--gold); }
