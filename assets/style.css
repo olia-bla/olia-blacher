@@ -60,9 +60,6 @@ h1 { font-family: var(--condensed); font-size: clamp(58px, 5.7vw, 82px); line-he
 .text-link:hover { border-color: var(--navy); }
 .profile-figure { padding: 25px 28px 28px; border: 1px solid var(--line); background: white; }
 .profile-photo { display: block; width: 100%; height: auto; }
-.profile-figure figcaption { margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--line); }
-.profile-figure figcaption strong { display: block; color: var(--navy); font-family: var(--serif); font-size: 23px; font-weight: 400; line-height: 1.4; }
-.profile-figure figcaption span { display: block; margin-top: 8px; color: var(--muted); font-size: 12px; line-height: 1.8; }
 .topic-band { border-block: 1px solid var(--line); }
 .topic-band .container { display: flex; align-items: center; justify-content: space-between; gap: 22px; padding-block: 21px; color: var(--navy); font-family: var(--condensed); font-size: 14px; }
 .topic-band [aria-hidden] { color: var(--gold); font-size: 12px; }
@@ -203,7 +200,6 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
   .hero-intro { font-size: 15px; }
   .hero-actions { gap: 17px; }
   .profile-figure { padding: 18px; }
-  .profile-figure figcaption strong { font-size: 20px; }
   .section { padding-block: 75px; }
   .research-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
   .research-topic { gap: 12px; }
@@ -234,8 +230,6 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
   .hero-actions .text-link { font-size: 14px; }
   .button { gap: 23px; padding: 11px 16px; font-size: 15px; }
   .profile-figure { max-width: 410px; width: 100%; justify-self: center; padding: 23px; }
-  .profile-figure figcaption strong { font-size: 24px; }
-  .profile-figure figcaption span { font-size: 13px; }
   .topic-band .container { column-gap: 16px; font-size: 12px; }
   h2 { font-size: clamp(27px, 7.1vw, 35px); }
   .section-heading { margin-bottom: 32px; }
