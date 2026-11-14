@@ -70,6 +70,7 @@ h1 { font-family: var(--condensed); font-size: clamp(58px, 5.7vw, 82px); line-he
 .section-heading .eyebrow { margin-bottom: 17px; }
 h2 { font-family: var(--serif); font-size: clamp(30px, 3.3vw, 43px); line-height: 1.35; letter-spacing: -.045em; }
 h2 em { color: var(--muted); }
+.section-subtitle { margin-top: 12px; color: var(--muted); font-size: 18px; line-height: 1.6; }
 .research-grid { display: grid; grid-template-columns: 1.14fr 1fr; gap: 80px; align-items: start; }
 .research-topic { display: grid; grid-template-columns: 28px 1fr; gap: 20px; padding-block: 27px; border-top: 1px solid var(--line); }
 .research-topic:first-child { padding-top: 0; border-top: none; }
@@ -156,6 +157,7 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
 .international-list p { margin-top: 8px; color: var(--muted); font-size: 14px; }
 .international-list .text-link { margin-top: 15px; font-size: 14px; }
 .contact-section { padding-block: 75px 80px; background: var(--navy); color: white; }
+.contact-section::selection, .contact-section ::selection { background: #c8d8ef; color: var(--navy); }
 .contact-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 100px; align-items: start; }
 .contact-section .eyebrow { color: white; }
 .contact-section h2 { color: white; font-size: 47px; }
@@ -164,9 +166,8 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
 .contact-email { display: inline-flex; align-items: center; gap: 23px; margin-top: 28px; padding-bottom: 6px; font-family: var(--condensed); font-size: clamp(21px, 2.2vw, 28px); text-decoration: none; border-bottom: 1px solid var(--gold); overflow-wrap: anywhere; }
 .contact-email:hover { color: #e1e7ef; }
 .contact-details { padding-bottom: 3px; }
-.contact-details > .small-label { color: #e1e7ef; }
-.contact-details > p + p { margin-top: 13px; font-size: 14px; line-height: 1.9; }
 .contact-location { margin-top: 22px; }
+.contact-location:first-child { margin-top: 0; }
 .contact-location h3 { color: white; font-family: var(--condensed); font-size: 17px; line-height: 1.5; }
 .contact-location p, .contact-location address { margin-top: 8px; color: #e1e7ef; font-size: 14px; font-style: normal; line-height: 1.9; }
 .profile-links { margin-top: 24px; }
@@ -307,7 +308,7 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
   .publication, .timeline li, .talk-list > li, .teaching-card, .organization-card, .international-list li { break-inside: avoid; }
   details { display: none; }
   .contact-section { background: white; color: #000; border-top: 1px solid #999; padding-block: 25px; }
-  .contact-section h2, .contact-section h2 em, .contact-section h2 + p, .contact-section .eyebrow, .contact-details > .small-label, .profile-links a span:last-child { color: #000; }
+  .contact-section h2, .contact-section h2 em, .contact-section h2 + p, .contact-section .eyebrow, .profile-links a span:last-child { color: #000; }
   .contact-location h3, .contact-location p, .contact-location address { color: #000; }
   .contact-section h2 { font-size: 25pt; }
   .contact-email { font-size: 17pt; }
