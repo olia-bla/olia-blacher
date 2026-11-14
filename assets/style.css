@@ -32,10 +32,12 @@ em { font-style: normal; }
 .skip-link:focus { transform: translateY(0); }
 .site-header { position: sticky; top: 0; z-index: 20; background: var(--paper); border-bottom: 1px solid var(--line); }
 .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 94px; }
-.wordmark { display: flex; align-items: center; gap: 13px; text-decoration: none; color: var(--navy); font-size: 17px; font-weight: 600; line-height: 1.3; flex-shrink: 0; }
+.wordmark { display: flex; align-items: center; gap: 13px; text-decoration: none; color: var(--navy); flex-shrink: 0; }
 .monogram { display: block; width: 49px; height: 49px; flex-shrink: 0; }
 .monogram img { display: block; width: 100%; height: 100%; }
-.wordmark-caption { display: block; margin-top: 3px; color: var(--muted); font-family: var(--condensed); font-size: 12px; font-weight: 400; letter-spacing: .02em; line-height: 1.4; }
+.wordmark-text { display: block; width: 116px; height: 49px; overflow: visible; flex-shrink: 0; }
+.wordmark-name { fill: var(--navy); font-family: var(--sans); font-size: 17px; font-weight: 600; }
+.wordmark-caption { fill: var(--muted); font-family: var(--condensed); font-size: 11.5px; font-weight: 400; }
 nav { display: flex; align-items: center; gap: 25px; }
 nav a { position: relative; padding-block: 10px; text-decoration: none; font-family: var(--condensed); font-size: 16px; font-weight: 500; white-space: nowrap; }
 nav a::after { content: ""; position: absolute; inset: auto 0 3px; height: 2px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform 180ms; }
@@ -110,13 +112,13 @@ details { margin-top: 13px; font-size: 13px; }
 summary { width: fit-content; color: var(--navy); font-family: var(--condensed); font-size: 13px; cursor: pointer; }
 summary:hover { text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 4px; }
 details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wrap: anywhere; }
-.teaching-grid { display: grid; grid-template-columns: .82fr 1.18fr; gap: 80px; }
-.teaching-card { padding: 29px 30px 32px; background: var(--pale-blue); border-left: 2px solid var(--gold); }
-.teaching-card + .teaching-card { margin-top: 18px; }
+.conference-contributions { margin-top: 32px; padding-top: 26px; border-top: 1px solid var(--line); }
+.teaching-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.teaching-card { display: flex; flex-direction: column; align-items: flex-start; padding: 29px 30px 32px; background: var(--pale-blue); border-left: 2px solid var(--gold); }
 .small-label { font-family: var(--condensed); color: var(--muted); font-size: 12px; font-weight: 500; letter-spacing: .065em; text-transform: uppercase; }
 .teaching-card h3 { margin-top: 18px; font-family: var(--serif); font-size: 24px; line-height: 1.5; letter-spacing: -.03em; }
-.teaching-card p { margin-top: 18px; color: var(--muted); font-size: 14px; }
-.teaching-card a { margin-top: 24px; }
+.teaching-card p { margin-top: 18px; margin-bottom: 24px; color: var(--muted); font-size: 14px; }
+.teaching-card a { margin-top: auto; }
 .teaching-note { margin-top: 20px; color: var(--muted); font-size: 13px; }
 .list-heading { font-family: var(--condensed); font-size: 22px; margin-bottom: 25px; }
 .talk-list { list-style: none; padding: 0; }
@@ -129,9 +131,10 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
 .talk-list details { margin-top: 7px; }
 .talk-list .text-link { margin-top: 10px; font-size: 12px; }
 .organization-section { background: var(--pale-blue); border-top: 1px solid var(--line); }
-.organization-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.organization-group + .organization-group { margin-top: 32px; }
+.organization-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; }
 .organization-card { display: flex; flex-direction: column; align-items: flex-start; padding: 28px; background: white; border-top: 2px solid var(--gold); }
-.organization-card h3 { margin-top: 17px; font-family: var(--condensed); font-size: 25px; line-height: 1.35; }
+.organization-card h4 { margin-top: 17px; font-family: var(--condensed); font-size: 25px; line-height: 1.35; }
 .organization-card p { margin-top: 15px; margin-bottom: 24px; color: var(--muted); font-size: 14px; line-height: 1.8; }
 .organization-card .text-link { margin-top: auto; font-size: 14px; }
 .career-section { background: white; border-top: 1px solid var(--line); }
@@ -181,10 +184,9 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
 @media (max-width: 1060px) {
   .container { width: calc(100% - 56px); }
   .hero { gap: 40px; padding-block: 52px; }
-  .wordmark-caption { font-size: 11px; }
   nav { gap: 16px; }
   nav a { font-size: 14px; }
-  .research-grid, .career-grid, .teaching-grid { gap: 45px; }
+  .research-grid, .career-grid { gap: 45px; }
   .contact-grid { gap: 60px; }
   .topic-band .container { gap: 15px; font-size: 12px; }
   .topic-keyword { gap: 15px; }
@@ -195,7 +197,7 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
   .header-inner { flex-wrap: wrap; min-height: 78px; gap: 0; }
   .wordmark { padding-block: 14px; }
   .monogram { width: 43px; height: 43px; }
-  .wordmark-caption { font-size: 11px; }
+  .wordmark-text { width: 101.8px; height: 43px; }
   .menu-toggle:not([hidden]) { display: flex; }
   nav { flex-basis: 100%; flex-direction: column; align-items: stretch; gap: 0; padding-block: 0 15px; }
   nav a { padding: 11px 0; font-size: 16px; border-top: 1px solid var(--line); }
@@ -215,10 +217,9 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
   .dissertation { padding: 25px; }
   .dissertation h3 { font-size: 26px; }
   .dissertation-subtitle { font-size: 14px; }
-  .teaching-grid { grid-template-columns: .9fr 1.1fr; gap: 35px; }
+  .teaching-grid { gap: 20px; }
   .teaching-card { padding: 25px; }
   .teaching-card h3 { font-size: 21px; }
-  .talk-list > li { grid-template-columns: 1fr; gap: 7px; }
   .career-grid { gap: 40px; }
   .contact-grid { gap: 40px; }
   .topic-band .container { justify-content: center; flex-wrap: wrap; gap: 6px 17px; padding-block: 17px; }
@@ -237,7 +238,8 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
   .topic-keyword { gap: 16px; }
   h2 { font-size: clamp(27px, 7.1vw, 35px); }
   .section-heading { margin-bottom: 24px; }
-  .research-grid, .teaching-grid, .career-grid, .contact-grid { grid-template-columns: 1fr; gap: 35px; }
+  .research-grid, .career-grid, .contact-grid { grid-template-columns: 1fr; gap: 35px; }
+  .teaching-grid { grid-template-columns: 1fr; gap: 18px; }
   .research-topic { grid-template-columns: 23px 1fr; gap: 15px; padding-block: 20px; }
   .research-topic h3 { font-size: 23px; }
   .research-topic p { font-size: 15px; }
@@ -274,8 +276,7 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
 }
 @media (max-width: 360px) {
   .container { width: calc(100% - 32px); }
-  .wordmark { gap: 10px; font-size: 15px; }
-  .wordmark-caption { max-width: 140px; font-size: 10px; letter-spacing: 0; }
+  .wordmark { gap: 10px; }
   .contact-email { font-size: 20px; gap: 10px; }
 }
 @media (prefers-reduced-motion: reduce) {
