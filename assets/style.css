@@ -39,6 +39,7 @@ em { font-style: normal; }
 .wordmark-name { fill: var(--navy); font-family: var(--sans); font-size: 17px; font-weight: 600; }
 .wordmark-caption { fill: var(--navy); font-family: var(--condensed); font-size: 11px; font-weight: 500; }
 .wordmark-prefix { font-size: 9px; }
+.wordmark-city { letter-spacing: 2px; }
 nav { display: flex; align-items: center; gap: 25px; }
 nav a { position: relative; padding-block: 10px; text-decoration: none; font-family: var(--condensed); font-size: 16px; font-weight: 500; white-space: nowrap; }
 nav a::after { content: ""; position: absolute; inset: auto 0 3px; height: 2px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform 180ms; }
@@ -90,7 +91,7 @@ h2 em { color: var(--muted); }
 .dissertation dd { margin-left: 0; color: #e1e7ef; line-height: 1.8; }
 .dissertation-mark { position: absolute; right: -12px; bottom: -62px; color: #17436e; font-family: var(--serif); font-size: 200px; line-height: 1; pointer-events: none; }
 .publication-section { background: white; border-block: 1px solid var(--line); }
-.publications-conferences-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; align-items: start; }
+.publications-conferences-grid { display: grid; grid-template-columns: minmax(0, .76fr) minmax(0, 1.24fr); gap: 40px; align-items: stretch; }
 .publication-column { min-width: 0; }
 .heading-with-link { display: flex; align-items: end; justify-content: space-between; gap: 30px; }
 .heading-with-link > .text-link { flex-shrink: 0; margin-bottom: 9px; }
@@ -123,11 +124,13 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
 .teaching-card h3 { margin-top: 18px; font-family: var(--serif); font-size: 24px; line-height: 1.5; letter-spacing: -.03em; }
 .teaching-card p { margin-top: 18px; margin-bottom: 24px; color: var(--muted); font-size: 14px; }
 .teaching-card a { margin-top: auto; }
-.teaching-history-card { grid-column: 1 / -1; }
-.teaching-history-groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 28px; width: 100%; margin-top: 18px; }
+.teaching-history-card { min-width: 0; }
+.teaching-history-card h3 { font-size: 22px; line-height: 1.4; }
+.teaching-history-groups { width: 100%; margin-top: 14px; }
+.teaching-history-group + .teaching-history-group { margin-top: 18px; }
 .teaching-history-group h4 { font-family: var(--condensed); font-size: 18px; line-height: 1.4; }
 .teaching-history-card .teaching-providers { margin: 6px 0 0; font-family: var(--condensed); font-size: 13px; }
-.teaching-course-topics { margin: 8px 0 0; padding-left: 18px; color: var(--muted); font-size: 14px; }
+.teaching-course-topics { margin: 8px 0 0; padding-left: 18px; color: var(--muted); font-size: 14px; line-height: 1.6; }
 .teaching-course-topics li + li { margin-top: 6px; }
 .teaching-course-topics strong { color: var(--ink); font-weight: 500; }
 .list-heading { font-family: var(--condensed); font-size: 22px; margin-bottom: 20px; }
@@ -191,7 +194,11 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
 .site-footer a { color: var(--navy); text-decoration: none; font-family: var(--condensed); font-size: 12px; }
 .footer-separator { margin-inline: 11px; color: var(--gold); }
 
-@media (min-width: 861px) { .menu-toggle { display: none; } }
+@media (min-width: 861px) {
+  .menu-toggle { display: none; }
+  .publication-column, .conference-contributions { display: flex; flex-direction: column; }
+  .publication-list, .conference-contributions > .talk-list { display: flex; flex: 1; flex-direction: column; justify-content: space-between; }
+}
 @media (max-width: 1060px) {
   .container { width: calc(100% - 56px); }
   .hero { gap: 32px; padding-block: 40px; }
@@ -205,7 +212,7 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
 }
 @media (max-width: 860px) {
   .organization-grid { grid-template-columns: 1fr; gap: 16px; }
-  .publications-conferences-grid { grid-template-columns: 1fr; gap: 24px; }
+  .publications-conferences-grid { grid-template-columns: 1fr; gap: 24px; align-items: start; }
   html { scroll-padding-top: 95px; }
   .header-inner { flex-wrap: wrap; min-height: 78px; gap: 0; }
   .wordmark { padding-block: 14px; }
@@ -253,7 +260,6 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
   .section-heading { margin-bottom: 20px; }
   .research-grid, .career-grid, .contact-grid { grid-template-columns: 1fr; gap: 24px; }
   .teaching-grid { grid-template-columns: 1fr; gap: 16px; }
-  .teaching-history-groups { grid-template-columns: 1fr; gap: 18px; }
   .research-topic { grid-template-columns: 23px 1fr; gap: 15px; padding-block: 20px; }
   .research-topic h3 { font-size: 23px; }
   .research-topic p { font-size: 15px; }
@@ -313,6 +319,7 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
   h2 { font-size: 22pt; }
   .section-heading { margin-bottom: 20px; }
   .publications-conferences-grid { grid-template-columns: 1fr; gap: 20px; }
+  .publication-column, .conference-contributions, .publication-list, .conference-contributions > .talk-list { display: block; }
   .research-grid, .career-grid, .teaching-grid, .contact-grid { gap: 25px; }
   .dissertation, .teaching-card, .organization-card { background: white; color: #000; border: 1px solid #999; }
   .organization-section { background: white; }

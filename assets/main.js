@@ -65,4 +65,29 @@
 
   const year = document.querySelector("#year");
   if (year) year.textContent = String(new Date().getFullYear());
+
+  const university = document.querySelector(".wordmark-university");
+  const city = document.querySelector(".wordmark-city");
+  const matchWordmarkSpacing = () => {
+    if (!university || !city || !university.ownerSVGElement) return;
+    const naturalText = university.cloneNode(true);
+    naturalText.removeAttribute("textLength");
+    naturalText.removeAttribute("lengthAdjust");
+    naturalText.style.letterSpacing = "0px";
+    naturalText.style.visibility = "hidden";
+    university.ownerSVGElement.appendChild(naturalText);
+    try {
+      const naturalWidth = naturalText.getComputedTextLength();
+      const targetWidth = Number(university.getAttribute("textLength"));
+      const gaps = university.textContent.trim().length - 1;
+      const spacing = (targetWidth - naturalWidth) / gaps;
+      if (naturalWidth > 0 && gaps > 0 && Number.isFinite(spacing)) {
+        city.style.letterSpacing = `${spacing}px`;
+      }
+    } finally {
+      naturalText.remove();
+    }
+  };
+  matchWordmarkSpacing();
+  if (document.fonts) document.fonts.ready.then(matchWordmarkSpacing);
 })();
