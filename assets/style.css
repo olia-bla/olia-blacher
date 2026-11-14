@@ -50,9 +50,6 @@ nav .nav-contact { margin-left: 4px; }
 .hero-copy { min-width: 0; }
 .eyebrow { margin-bottom: 20px; color: var(--navy); font-family: var(--condensed); font-size: 13px; font-weight: 600; letter-spacing: .095em; text-transform: uppercase; }
 .eyebrow::before { content: ""; display: block; width: 26px; height: 2px; margin-bottom: 12px; background: var(--gold); }
-.hero .eyebrow { margin-bottom: 12px; color: var(--muted); line-height: 1.6; }
-.hero .eyebrow::before { content: none; }
-.hero-role { margin: 0 0 14px; color: var(--muted); font-family: var(--condensed); font-size: 17px; line-height: 1.5; }
 h1 { font-family: var(--condensed); font-size: clamp(58px, 5.7vw, 82px); line-height: 1.05; letter-spacing: -.04em; }
 .hero h1 { color: var(--navy); font-size: clamp(64px, 6.2vw, 88px); }
 .name-dot { color: var(--gold); }
@@ -293,7 +290,7 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
   nav, .menu-toggle, .topic-band, .profile-figure, .skip-link, .site-footer a, .dissertation-mark { display: none !important; }
   .hero-section { background: white; color: #000; }
   .hero { display: block; padding-block: 25px; }
-  .hero .eyebrow, .hero-role, .hero h1, .hero-title, .hero-title span, .hero-intro { color: #000; }
+  .hero h1, .hero-title, .hero-title span, .hero-intro { color: #000; }
   .hero h1 { font-size: 38pt; }
   .hero-title { font-size: 19pt; }
   .hero-intro { max-width: 100%; }
