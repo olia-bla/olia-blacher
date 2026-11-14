@@ -54,7 +54,6 @@ h1 { font-family: var(--condensed); font-size: clamp(58px, 5.7vw, 82px); line-he
 .hero-intro { max-width: 505px; margin-top: 25px; color: var(--muted); font-size: 17px; line-height: 1.8; }
 .text-link { display: inline-flex; align-items: center; gap: 12px; color: var(--navy); font-family: var(--condensed); font-weight: 500; font-size: 15px; text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: 2px; }
 .text-link:hover { border-color: var(--navy); }
-.profile-figure { padding: 25px 28px 28px; border: 1px solid var(--line); background: white; }
 .profile-photo { display: block; width: 100%; height: auto; }
 .topic-band { border-block: 1px solid var(--line); }
 .topic-band .container { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px 22px; padding-block: 21px; color: var(--navy); font-family: var(--condensed); font-size: 14px; }
@@ -177,7 +176,6 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
   nav a { font-size: 14px; }
   .research-grid, .career-grid, .teaching-grid { gap: 45px; }
   .contact-grid { gap: 60px; }
-  .profile-figure { padding: 22px; }
   .topic-band .container { gap: 15px; font-size: 12px; }
   .topic-keyword { gap: 15px; }
 }
@@ -198,7 +196,6 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
   h1 { font-size: 58px; }
   .hero-title { font-size: 27px; }
   .hero-intro { font-size: 15px; }
-  .profile-figure { padding: 18px; }
   .section { padding-block: 75px; }
   .research-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
   .research-topic { gap: 12px; }
@@ -224,7 +221,7 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
   .hero h1 { font-size: clamp(52px, 12vw, 70px); }
   .hero-title { margin-top: 18px; font-size: clamp(23px, 5.7vw, 30px); }
   .hero-intro { font-size: 16px; margin-top: 21px; }
-  .profile-figure { max-width: 410px; width: 100%; justify-self: center; padding: 23px; }
+  .profile-figure { max-width: 410px; width: 100%; justify-self: center; }
   .topic-band .container { column-gap: 16px; font-size: 12px; }
   .topic-keyword { gap: 16px; }
   h2 { font-size: clamp(27px, 7.1vw, 35px); }
