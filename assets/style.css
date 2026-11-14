@@ -38,7 +38,7 @@ em { font-style: normal; }
 .wordmark-text { display: block; width: 116px; height: 64px; overflow: visible; flex-shrink: 0; }
 .wordmark-name { fill: var(--navy); font-family: var(--sans); font-size: 17px; font-weight: 600; }
 .wordmark-caption { fill: var(--navy); font-family: var(--condensed); font-size: 11px; font-weight: 500; }
-.wordmark-city { fill: var(--navy); font-family: var(--condensed); font-size: 16px; font-weight: 600; }
+.wordmark-prefix { font-size: 9px; }
 nav { display: flex; align-items: center; gap: 25px; }
 nav a { position: relative; padding-block: 10px; text-decoration: none; font-family: var(--condensed); font-size: 16px; font-weight: 500; white-space: nowrap; }
 nav a::after { content: ""; position: absolute; inset: auto 0 3px; height: 2px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform 180ms; }
@@ -126,7 +126,6 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
 .teaching-history-card { grid-column: 1 / -1; }
 .teaching-history-groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 28px; width: 100%; margin-top: 18px; }
 .teaching-history-group h4 { font-family: var(--condensed); font-size: 18px; line-height: 1.4; }
-.teaching-history-group:last-child { grid-column: 1 / -1; }
 .teaching-history-card .teaching-providers { margin: 6px 0 0; font-family: var(--condensed); font-size: 13px; }
 .teaching-course-topics { margin: 8px 0 0; padding-left: 18px; color: var(--muted); font-size: 14px; }
 .teaching-course-topics li + li { margin-top: 6px; }
@@ -160,6 +159,7 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
 .timeline .text-link { margin-top: 10px; font-size: 13px; }
 .career-links { display: flex; flex-wrap: wrap; column-gap: 20px; }
 .international { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--line); }
+.abroad-stays { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--line); }
 .international h3 { margin-top: 12px; font-family: var(--serif); font-size: 27px; letter-spacing: -.03em; }
 .international-intro { max-width: 900px; margin-top: 16px; color: var(--muted); font-size: 15px; line-height: 1.8; }
 .international-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 20px; padding: 0; list-style: none; }
