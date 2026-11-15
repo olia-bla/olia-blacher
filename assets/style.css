@@ -62,7 +62,6 @@ h1 { font-family: var(--condensed); font-size: clamp(58px, 5.7vw, 82px); line-he
 .hero-coordination { margin-top: 6px; color: var(--muted); font-family: var(--condensed); font-size: 14px; line-height: 1.5; }
 .hero-title { margin-top: 20px; font-family: var(--serif); color: var(--navy); font-size: clamp(26px, 2.4vw, 34px); font-weight: 400; line-height: 1.5; letter-spacing: -.045em; }
 .hero-title span { color: var(--muted); }
-.hero-intro { max-width: 540px; margin-top: 20px; color: var(--muted); font-size: 17px; line-height: 1.85; }
 .text-link { display: inline-flex; align-items: center; gap: 12px; color: var(--navy); font-family: var(--condensed); font-weight: 500; font-size: 15px; text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: 2px; }
 .text-link:hover { border-color: var(--navy); }
 .hero-links { display: flex; flex-wrap: wrap; gap: 10px 24px; margin-top: 20px; }
@@ -71,6 +70,7 @@ h1 { font-family: var(--condensed); font-size: clamp(58px, 5.7vw, 82px); line-he
 .profile-photo { display: block; width: 100%; height: auto; border: 0; border-radius: 0; box-shadow: none; }
 .topic-band { background: #f0f3f7; border-block: 1px solid var(--line); }
 .topic-band .container { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px 22px; padding-block: 16px; color: var(--navy); font-family: var(--condensed); font-size: 14px; }
+.topic-band-label { flex-basis: 100%; color: var(--muted); font-family: var(--condensed); font-size: 12px; font-weight: 500; line-height: 1.5; letter-spacing: .065em; text-align: center; text-transform: uppercase; }
 .topic-keyword { display: inline-flex; align-items: center; gap: 22px; white-space: nowrap; }
 .topic-separator { color: var(--gold); font-size: 18px; line-height: 1; }
 .section-heading { margin-bottom: 24px; }
@@ -234,7 +234,6 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
   .hero { gap: 28px; grid-template-columns: 1fr; padding-block: 34px; }
   .hero h1 { font-size: clamp(64px, 9vw, 76px); }
   .hero-title { font-size: 29px; }
-  .hero-intro { max-width: 660px; font-size: 16px; }
   .profile-figure { width: 100%; max-width: 620px; justify-self: start; }
   .section { padding-block: 40px; }
   .research-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
@@ -259,7 +258,6 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
   .eyebrow { font-size: 11px; }
   .hero h1 { font-size: clamp(52px, 12vw, 70px); }
   .hero-title { margin-top: 18px; font-size: clamp(23px, 5.7vw, 30px); }
-  .hero-intro { font-size: 16px; margin-top: 18px; }
   .profile-figure { max-width: 100%; justify-self: stretch; }
   .topic-band .container { column-gap: 16px; font-size: 12px; }
   .topic-keyword { gap: 16px; }
@@ -318,10 +316,9 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
   nav, .menu-toggle, .topic-band, .profile-figure, .skip-link, .site-footer a, .dissertation-mark { display: none !important; }
   .hero-section { background: white; color: #000; }
   .hero { display: block; padding-block: 25px; }
-  .hero h1, .hero-title, .hero-title span, .hero-intro { color: #000; }
+  .hero h1, .hero-title, .hero-title span { color: #000; }
   .hero h1 { font-size: 38pt; }
   .hero-title { font-size: 19pt; }
-  .hero-intro { max-width: 100%; }
   .section { padding-block: 25px; }
   h2 { font-size: 22pt; }
   .section-heading { margin-bottom: 20px; }
