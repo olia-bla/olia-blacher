@@ -50,7 +50,7 @@ nav .nav-contact { margin-left: 4px; }
 .menu-lines { width: 17px; height: 10px; border-top: 1.5px solid; border-bottom: 1.5px solid; }
 .menu-toggle[aria-expanded="true"] .menu-lines { height: 0; transform: rotate(-45deg); border-bottom: 0; }
 .hero-section { background: #f6f5f0; color: var(--ink); }
-.hero { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 48px; align-items: center; padding-block: 44px 40px; }
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 40px; align-items: center; padding-block: 32px; }
 .hero-copy { min-width: 0; }
 .eyebrow { margin-bottom: 16px; color: var(--navy); font-family: var(--condensed); font-size: 13px; font-weight: 600; letter-spacing: .095em; text-transform: uppercase; }
 .eyebrow::before { content: ""; display: block; width: 26px; height: 2px; margin-bottom: 10px; background: var(--gold); }
@@ -66,7 +66,7 @@ h1 { font-family: var(--condensed); font-size: clamp(58px, 5.7vw, 82px); line-he
 .text-link:hover { border-color: var(--navy); }
 .hero-links { display: flex; flex-wrap: wrap; gap: 10px 24px; margin-top: 20px; }
 .hero-links .text-link { padding-block: 5px; font-size: 14px; }
-.profile-figure { min-width: 0; margin: 0; padding: 0; border: 0; background: transparent; box-shadow: none; }
+.profile-figure { width: 100%; max-width: 320px; min-width: 0; margin: 0; padding: 0; border: 0; background: transparent; box-shadow: none; }
 .profile-photo { display: block; width: 100%; height: auto; border: 0; border-radius: 0; box-shadow: none; }
 .topic-band { background: #f0f3f7; border-block: 1px solid var(--line); }
 .topic-band .container { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px 22px; padding-block: 16px; color: var(--navy); font-family: var(--condensed); font-size: 14px; }
@@ -127,6 +127,10 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
 .talk-archive > summary { font-size: 15px; font-weight: 500; }
 .talk-archive > .talk-list { margin-top: 20px; }
 .teaching-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.teaching-archive { margin-top: 22px; padding-top: 16px; border-top: 1px solid var(--line); }
+.teaching-archive > summary { width: 100%; font-size: 15px; font-weight: 500; line-height: 1.5; }
+.teaching-archive-description { display: block; margin-top: 4px; color: var(--muted); font-size: 14px; font-weight: 400; }
+.teaching-archive > .teaching-grid { margin-top: 20px; }
 .teaching-card { display: flex; flex-direction: column; align-items: flex-start; padding: 29px 30px 32px; background: var(--pale-blue); border-left: 2px solid var(--gold); }
 .small-label { font-family: var(--condensed); color: var(--muted); font-size: 12px; font-weight: 500; letter-spacing: .065em; text-transform: uppercase; }
 .teaching-card h3 { margin-top: 18px; font-family: var(--serif); font-size: 24px; line-height: 1.5; letter-spacing: -.03em; }
@@ -223,7 +227,7 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
 }
 @media (max-width: 1060px) {
   .container { width: calc(100% - 56px); }
-  .hero { gap: 32px; padding-block: 40px; }
+  .hero { gap: 32px; padding-block: 32px; }
   .publications-conferences-grid { column-gap: 32px; }
   nav { gap: 16px; }
   nav a { font-size: 14px; }
@@ -248,10 +252,10 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
   nav a::after { display: none; }
   nav .nav-contact { margin-left: 0; }
   .js nav:not(.is-open) { display: none; }
-  .hero { gap: 28px; grid-template-columns: 1fr; padding-block: 34px; }
+  .hero { gap: 28px; padding-block: 30px; }
   .hero h1 { font-size: clamp(64px, 9vw, 76px); }
   .hero-title { font-size: 29px; }
-  .profile-figure { width: 100%; max-width: 620px; justify-self: start; }
+  .profile-figure { justify-self: start; }
   .section { padding-block: 40px; }
   .research-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
   .research-topic { gap: 12px; }
@@ -271,11 +275,11 @@ details p { max-width: 850px; margin-top: 10px; color: var(--muted); overflow-wr
 @media (max-width: 640px) {
   .container { width: calc(100% - 40px); }
   .section { padding-block: 32px; }
-  .hero { padding-block: 28px 30px; gap: 24px; }
+  .hero { grid-template-columns: 1fr; padding-block: 28px; gap: 20px; }
   .eyebrow { font-size: 11px; }
   .hero h1 { font-size: clamp(52px, 12vw, 70px); }
   .hero-title { margin-top: 18px; font-size: clamp(23px, 5.7vw, 30px); }
-  .profile-figure { max-width: 100%; justify-self: stretch; }
+  .profile-figure { width: 33.333%; max-width: 180px; justify-self: start; }
   .topic-band .container { column-gap: 16px; font-size: 12px; }
   .topic-keyword { gap: 16px; }
   h2 { font-size: clamp(27px, 7.1vw, 35px); }
